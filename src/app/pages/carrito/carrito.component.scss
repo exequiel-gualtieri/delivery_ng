@@ -1,0 +1,134 @@
+@use './../../../assets/styles/variables';
+
+h2 {
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#tarjeas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tarjeta-producto-container {
+  position: relative;
+  display: flex;
+  height: 100px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+#izq {
+  width: 35%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  > div {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    img {
+      height: 20px;
+      background-color: variables.$color-principal-claro;
+      border-radius: 50%;
+    }
+  }
+}
+
+#centro {
+  width: 50%;
+  background-color: gainsboro;
+}
+
+#der {
+  width: 25%;
+  background-color: gray;
+}
+
+#mas {
+  background-color: variables.$color-principal;
+  font-size: xx-large;
+  text-decoration: none;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+#informacion {
+  font-size: larger;
+}
+
+#envios-container {
+  background-color: variables.$color-principal-claro;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;;
+  align-items: center;
+  h4 {
+    font-size: larger;
+  }
+}
+
+#montos {
+	text-align: end;
+}
+
+#totales > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#enviar {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  font-size: larger;
+  background-color: variables.$color-principal-claro;
+  border: unset;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+dialog {
+  background-color: variables.$color-principal-claro;
+  border-radius: 10px;
+  border: unset;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.150);
+  div {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    &:first-of-type {
+      background-color: rgb(211,255,211);
+    }
+    &:last-of-type {
+      background-color: rgb(255,211,211);
+    }
+
+    span:first-child {
+      font-size: x-large;
+    }
+
+  }
+  p {
+    font-size: x-large;
+    text-align: center;
+  }
+}

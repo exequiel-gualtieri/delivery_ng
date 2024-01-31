@@ -1,0 +1,22 @@
+<form #formulario="ngForm" class="margen-chico" (ngSubmit)="guardarDatosPerfil()">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" [(ngModel)]="perfil.nombre" #nombre="ngModel" minlength="5" required>
+    <p class="error" *ngIf="nombre.invalid && nombre.touched">Ingrese un nombre válido</p>
+  </div>
+  <div>
+    <label for="direccion">Direccion</label>
+    <input type="text" name="direccion" id="direccion" [(ngModel)]="perfil.direccion" #direccion="ngModel" minlength="8" required>
+    <p class="error" *ngIf="direccion.invalid && direccion.touched">Ingrese una dirección válida</p>
+  </div>
+  <div>
+    <label for="notas">Notas</label>
+    <input type="text" name="notas" id="notas" [(ngModel)]="perfil.detalleEntrega" #notas="ngModel">
+  </div>
+  <div>
+    <label for="telefono">Teléfono</label>
+    <input type="tel" name="telefono" id="telefono" [(ngModel)]="perfil.telefono" #telefono="ngModel" minlength="9" required>
+    <p class="error" *ngIf="telefono.invalid && telefono.touched">Ingrese un Teléfono válido</p>
+  </div>
+  <button [disabled]="formulario.invalid">Enviar</button>
+</form>

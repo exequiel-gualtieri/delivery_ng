@@ -1,0 +1,19 @@
+div {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  background-color: rgba(225,225,255,0.86);
+}
