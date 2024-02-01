@@ -81,7 +81,7 @@ La dirección de envío es: ${this.perfilService.perfil()?.direccion} - ${this.p
 Muchas gracias
     `
     const link = `https://wa.me/${NUMERO_TELEFONO}?text=${encodeURI(mensaje)}`
-    console.log(mensaje);
+    
     window.open(link,'_blank');
     this.dialog.nativeElement.showModal();
   }

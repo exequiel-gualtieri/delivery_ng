@@ -14,7 +14,7 @@ export class HeaderComponent {
   
   esconderTitulo = effect(() => {
     if(this.headerService.titulo()) {
-      console.log('ESCONDER');
+      
       this.claseAplicada.set('fade-out');
     }
   },{allowSignalWrites:true});
@@ -22,7 +22,7 @@ export class HeaderComponent {
   mostrarTituloNuevo(e:AnimationEvent) {
     console.log(e.animationName.includes('fade'));
     if(e.animationName.includes('fade')) {
-      console.log('MOSTRAR');
+      
       this.tituloMostrado.set(this.headerService.titulo());
       this.claseAplicada.set('fade-in');
       setTimeout(() => this.claseAplicada.set(''), 250);
