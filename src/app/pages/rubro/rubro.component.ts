@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, WritableSignal, inject, signal } from '@angular/core';
 import { HeaderService } from '../../core/services/header.service';
 import { ProductosService } from '../../core/services/productos.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -19,14 +19,14 @@ export class RubroComponent {
   productosService = inject(ProductosService);
   categoriasService = inject(CategoriasService);
   ac = inject(ActivatedRoute);
-  productos: Producto[] = []
+  productos: WritableSignal<Producto[]> = signal([]);
 
   ngOnInit(): void {
     this.ac.params.subscribe(params => {
       if(params['id']){
         this.categoriasService.getById(parseFloat(params['id']))
         .then(categoria => {
-          if(categoria) this.productos = categoria.productos,
+          if(categoria) this.productos.set(categoria.productos),
           this.headerService.titulo.set(categoria.nombre);
         });
       }

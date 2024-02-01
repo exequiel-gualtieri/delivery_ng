@@ -1,4 +1,4 @@
-@use '../../../assets/styles/variables';
+@import 'variables.scss';
 
 * {
   font-size: large;
@@ -9,18 +9,26 @@ form, form > div {
   flex-direction: column;
 }
 
-form {gap: 20px;}
-form div {gap: 5px}
+form {
+  gap: 20px;
+  div {gap: 5px}
+  margin: 10px 40px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid gray;
+}
 
 button {
   height: 40px;
   font-weight: bold;
-  background-color: variables.$color-principal;
+  background-color: $color-principal;
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: $border-radius-grande;
   cursor: pointer;
   &:disabled {
-    background-color: rgb(217, 217, 217);
+    background-color: $color-principal;
   }
 }
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, WritableSignal, inject, signal } from '@angular/core';
 import { HeaderService } from '../../core/services/header.service';
 import { CartService } from '../../core/services/cart.service';
 import { CommonModule } from '@angular/common';
@@ -8,6 +8,7 @@ import { ProductosService } from '../../core/services/productos.service';
 import { Router, RouterModule } from '@angular/router';
 import { PerfilService } from '../../core/services/perfil.service';
 import { NUMERO_TELEFONO } from '../../core/constants/telefono';
+import { ConfigService } from '../../core/services/config.service';
 
 @Component({
   selector: 'app-carrito',
@@ -21,35 +22,41 @@ export class CarritoComponent implements OnInit {
   cartService = inject(CartService);
   productosService = inject(ProductosService);
   perfilService = inject(PerfilService);
+  configService = inject(ConfigService);
   router = inject(Router);
 
-  productosCarrito: Producto[] = [];
+  productosCarrito: WritableSignal<Producto[]> = signal([]);
 
   subtotal: number = 0;
-  delivery: number = 100;
+  
   total: number = 0;
   @ViewChild("dialog") dialog!: ElementRef<HTMLDialogElement>;
 
   ngOnInit(): void {
     this.headerService.titulo.set('Carrito');
-    this.cartService.carrito.forEach(async itemCarrito => {
-      const res = await this.productosService.getById(itemCarrito.idProducto);
-      if(res) this.productosCarrito.push(res);
-      console.log(this.productosCarrito);
+    this.buscarInformacionProductos().then(() => {
       this.calcularInformacion();
-    })
+    });
+  }
+
+  async buscarInformacionProductos() {
+    for(let i = 0; i < this.cartService.carrito.length; i++) {
+      const itemCarrito = this.cartService.carrito[i];
+      const res = await this.productosService.getById(itemCarrito.idProducto);
+      if(res) this.productosCarrito.set([...this.productosCarrito(),res]);
+    }
   }
 
   eliminarProducto(idProducto: number) {
     this.cartService.eliminarProducto(idProducto);
   }
 
-  calcularInformacion () {
+  calcularInformacion() {
     this.subtotal = 0;
     for (let index = 0; index < this.cartService.carrito.length; index++) {
-      this.subtotal += this.productosCarrito[index].precio * this.cartService.carrito[index].cantidad;
+      this.subtotal += this.productosCarrito()[index].precio * this.cartService.carrito[index].cantidad;
     }
-    this.total = this.subtotal + this.delivery;
+    this.total = this.subtotal + this.configService.configuracion().costoEnvio;
   }
 
   cambiarCantidadProducto(id:number,cantidad:number) {

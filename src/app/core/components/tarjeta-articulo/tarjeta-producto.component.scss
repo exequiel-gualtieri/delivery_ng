@@ -1,10 +1,10 @@
-@use "./../../../../assets/styles/variables";
+@import 'variables.scss';
 
 #container {
   height: 100px;
   display: flex;
-  background-color: variables.$color-principal;
-  border-radius: 10px;
+  background-color: $color-principal;
+  border-radius: $border-radius-chico;
   overflow: hidden;
   font-size: small;
 }
@@ -21,8 +21,8 @@
     height: 20px;
     margin-bottom: 5px;
     margin-bottom: 10px;
-    background-color: rgb(175, 255, 224);
-    border-radius: 50px;
+    background-color: $color-sello-comida;
+    border-radius: $border-radius-grande;
     &:first-child {
       margin-left: 10px;
     }

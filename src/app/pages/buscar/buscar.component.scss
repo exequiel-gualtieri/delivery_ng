@@ -1,11 +1,18 @@
-@use '../../../assets/styles/variables';
+@import 'variables.scss';
+
+
+h2 {
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 50px;
+}
 
 #barra-busqueda {
 display: flex;
 align-items: center;
 height: 30px;
-background-color: variables.$color-principal-claro;
-border-radius: 25px;
+background-color: $color-principal-claro;
+border-radius: $border-radius-grande;
 margin: 20px 10%;
 padding: 5 10px;
   input {

@@ -1,4 +1,4 @@
-@use './../../../assets/styles/variables';
+@import 'variables.scss';
 
 h2 {
   font-size: xx-large;
@@ -10,7 +10,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-radius: 10px;
+  border-radius: $border-radius-chico;
   overflow: hidden;
 }
 .tarjeta-producto-container {
@@ -29,15 +29,15 @@ h2 {
   width: 35%;
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
+  border-radius: $border-radius-chico;
   > div {
     position: absolute;
     bottom: 10px;
     left: 10px;
     img {
       height: 20px;
-      background-color: variables.$color-principal-claro;
-      border-radius: 50%;
+      background-color: $color-principal-claro;
+      border-radius: $border-radius-grande;
     }
   }
 }
@@ -53,12 +53,12 @@ h2 {
 }
 
 #mas {
-  background-color: variables.$color-principal;
+  background-color: $color-principal;
   font-size: xx-large;
   text-decoration: none;
   color: #000;
   padding: 15px 20px;
-  border-radius: 10px;
+  border-radius: $border-radius-chico;
 }
 
 #informacion {
@@ -66,8 +66,8 @@ h2 {
 }
 
 #envios-container {
-  background-color: variables.$color-principal-claro;
-  border-radius: 10px;
+  background-color: $color-principal-claro;
+  border-radius: $border-radius-chico;
   padding: 10px;
   margin: 10px 0;;
   align-items: center;
@@ -91,17 +91,17 @@ h2 {
   width: 100%;
   margin-top: 40px;
   font-size: larger;
-  background-color: variables.$color-principal-claro;
+  background-color: $color-principal-claro;
   border: unset;
   cursor: pointer;
   padding: 15px 30px;
-  border-radius: 10px;
+  border-radius: $border-radius-chico;
   font-weight: bold;
 }
 
 dialog {
-  background-color: variables.$color-principal-claro;
-  border-radius: 10px;
+  background-color: $color-principal-claro;
+  border-radius: $border-radius-chico;
   border: unset;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.150);
   div {

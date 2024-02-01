@@ -1,4 +1,4 @@
-@use './../../../assets/styles/variables';
+@import 'variables.scss';
 
 #fotoProducto {
   width: 100%;
@@ -34,11 +34,12 @@ ul li {
 
 textarea {
   display: block;
-  border-radius: 20px;
+  border-radius: $border-radius-grande;
   border: unset;
-  background-color: variables.$color-principal-claro;
+  background-color: $color-principal-claro;
   margin-top: 10px;
   width: 100%;
+  resize: none;
 }
 
 #cantidad-container {
@@ -49,8 +50,8 @@ textarea {
 
 button {
   width: 100%;
-  border-radius: 20px;
+  border-radius: $border-radius-grande;
   border: unset;
-  background-color: variables.$color-principal-claro;
+  background-color: $color-principal-claro;
   padding: 10px;
 }

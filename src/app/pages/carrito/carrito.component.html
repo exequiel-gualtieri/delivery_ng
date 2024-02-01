@@ -1,32 +1,34 @@
 <ng-container *ngIf="cartService.carrito.length !== 0, else sinCarrito">
 
-<div id="tarjeas-container" class="margen-chico">
-  <div class="tarjeta-producto-container" *ngFor="let producto of cartService.carrito, index as i">
-    
-    <ng-container *ngIf="productosCarrito[i]">
-      <div id="izq" [ngStyle]="{'background-image':'url('+productosCarrito[i].fotoUrl+')'}">
-        <div>
-          <img *ngIf="productosCarrito[i].esCeliaco" src="/assets/icons/celiaco.png" alt="AptoCeliaco">
-          <img *ngIf="productosCarrito[i].esVegano" src="/assets/icons/vegano.svg" alt="AptoVegano">
-        </div>
-      </div>
-      <div id="centro">
-        <p>Producto: {{productosCarrito[i].nombre}}</p>
-        <p *ngIf="producto.notas !== ''" >{{producto.notas}}</p>
-        <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto, $event)" ></app-contador-cantidad>
-      </div>
-      <div id="der">
-        <button (click)="eliminarProducto(producto.idProducto)">X</button>
-        <p>$ {{productosCarrito[i].precio}}</p>
-      </div>
-    </ng-container>
-
-  </div>
+<section>
+  <div id="tarjeas-container" class="margen-chico">
+    <div class="tarjeta-producto-container" *ngFor="let producto of cartService.carrito, index as i">
   
-</div>
-<div class="flex-center">
-  <a id="mas" [routerLink]="['/']">+</a>
-</div>
+      <ng-container *ngIf="productosCarrito()[i]">
+        <div id="izq" [ngStyle]="{'background-image':'url('+productosCarrito()[i].fotoUrl+')'}">
+          <div>
+            <img *ngIf="productosCarrito()[i].esCeliaco" src="/assets/icons/celiaco.png" alt="AptoCeliaco">
+            <img *ngIf="productosCarrito()[i].esVegano" src="/assets/icons/vegano.svg" alt="AptoVegano">
+          </div>
+        </div>
+        <div id="centro">
+          <p>Producto: {{productosCarrito()[i].nombre}}</p>
+          <p *ngIf="producto.notas !== ''" >{{producto.notas}}</p>
+          <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto, $event)" ></app-contador-cantidad>
+        </div>
+        <div id="der">
+          <button (click)="eliminarProducto(producto.idProducto)">X</button>
+          <p>$ {{productosCarrito()[i].precio}}</p>
+        </div>
+      </ng-container>
+  
+    </div>
+  
+  </div>
+  <div class="flex-center">
+    <a id="mas" [routerLink]="['/']">+</a>
+  </div>
+</section>
 
 <section class="margen-chico" id="informacion">
   <div>
@@ -56,13 +58,13 @@
         <p class="negrita">Total</p>
       </div>
       <div id="montos">
-        <p class="negrita">$ <span>{{subtotal}}</span></p>
-        <p>$ <span>{{delivery}}</span></p>
-        <p class="negrita">$ <span>{{total}}</span></p>
+        <p class="negrita">$ {{subtotal}}</p>
+        <p>$ {{this.configService.configuracion().costoEnvio}}</p>
+        <p class="negrita">$ {{total}}</p>
       </div>
     </div>
   </div>
-  <button id="enviar" (click)="enviarMensaje()">Enviar Mensaje</button>
+  <button id="enviar" [disabled]="!perfilService.perfil()" (click)="enviarMensaje()">Realizar peido</button>
 </section>
 </ng-container>
 

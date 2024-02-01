@@ -24,6 +24,11 @@
       "dom"
     ]
   },
+  "stylePreprocessorOptions": {
+    "includePaths": [
+      "src/assets/styles"
+    ]
+  },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

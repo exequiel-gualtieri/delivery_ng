@@ -1,27 +1,35 @@
-<form #buscarForm="ngForm" (change)="buscar()">
-  <div id="barra-busqueda">
-    <div class="pi pi-search"></div>
-    <input type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
-  </div>
-  
-  <div id="filtros-container">
-    <div class="apto-container">
-      <img src="./../../../assets/icons/celiaco.png" alt="Apto celíaco">
-      <input type="checkbox" name="Apto celíaco" [(ngModel)]="parametrosBusqueda.aptoCeliaco">
-      <span>Apto Celiaco</span>
+<section>
+  <form #buscarForm="ngForm" (change)="buscar()">
+    <div id="barra-busqueda">
+      <div class="pi pi-search"></div>
+      <input type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
     </div>
   
-    <div class="apto-container">
-      <img src="./../../../assets/icons/vegano.svg" alt="Apto vegano">
-      <input type="checkbox" name="Apto vegano" [(ngModel)]="parametrosBusqueda.aptoVegano">
-      <span>Apto Vegano</span>
+    <div id="filtros-container">
+      <div class="apto-container">
+        <img src="./../../../assets/icons/celiaco.png" alt="Apto celíaco">
+        <input type="checkbox" name="Apto celíaco" [(ngModel)]="parametrosBusqueda.aptoCeliaco">
+        <span>Apto Celiaco</span>
+      </div>
+  
+      <div class="apto-container">
+        <img src="./../../../assets/icons/vegano.svg" alt="Apto vegano">
+        <input type="checkbox" name="Apto vegano" [(ngModel)]="parametrosBusqueda.aptoVegano">
+        <span>Apto Vegano</span>
+      </div>
     </div>
+  </form>
+  
+  <div id="contenedor-productos" *ngIf="productos().length !== 0; else sinResultado">
+    <app-tarjeta-producto
+      *ngFor="let producto of productos()"
+      [producto]="producto"
+      [routerLink]="['/articulo',producto.id]">
+    </app-tarjeta-producto>
   </div>
-</form>
 
-<div id="contenedor-productos">
-  <app-tarjeta-producto
-    *ngFor="let producto of productos"
-    [producto]="producto">
-  </app-tarjeta-producto>
-</div>
+  <ng-template #sinResultado>
+    <h2>Tu búsqueda no arrojó ningún resultado</h2>
+  </ng-template>
+
+</section>
