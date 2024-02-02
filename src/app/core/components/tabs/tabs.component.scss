@@ -1,27 +1,37 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
-#container {
-  display: flex;
-  justify-content: space-around;
-  background-color: #E5E5E5;
-  border-radius: $border-radius-chico $border-radius-chico 0 0;
-  overflow: hidden;
-  height: 80px;
+.tab-icon {
+  padding: .4rem;
+  @include full-center;
+  align-items: end;
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center 8px;
+  height: 52px;
+  font-weight: 400;
+  color: $font-color;
+  font-weight: 600;
+  font-size: .8rem;
 }
 
-.tab {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-
-  svg {
-    display: block;
-    margin: auto;
+.tabs {
+  &__container {
+    background-color: $white-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
+  &__home { background-image: url('/assets/icons/home.png') }
+  &__search { background-image: url('/assets/icons/search.png') }
+  &__cart { background-image: url('/assets/icons/cart.png') }
+  &__profile { background-image: url('/assets/icons/profile.png') }
+
+  &__selcted {
+    border-radius: 12px 12px 0 0;
+    background-color: #e0f4ff;
+    transition: 0.2s;
+    filter: hue-rotate(45deg);
+    transition: .2s ease-in-out;
+  }
 }
 
-.seleccionado {
-  background-color: $color-principal;
-  transition: .2s;
-}

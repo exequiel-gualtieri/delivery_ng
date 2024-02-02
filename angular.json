@@ -39,7 +39,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/styles/_variables.scss"
+              "src/assets/styles/_variables.scss",
+              "src/assets/styles/_mixin.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
