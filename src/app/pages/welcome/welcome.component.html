@@ -1,0 +1,30 @@
+<div class="welcome__container">
+    <img 
+    class="welcome__logo" 
+    src="/assets/logo/logo.png" 
+    alt="logo"
+    >
+
+    <h1 class="welcome__title">Bienvenid&#64;</h1>
+    <p class="welcome__subtitle">Te damos la bienvenida a nuestro catálogo virtual</p>
+
+    <form class="welcome__form">
+        <input [disabled]="true"
+        value="Continuar" 
+        class="app-btn"
+        [routerLink]="['/home']" 
+        >
+        <input
+        value="Términos legales" 
+        class="app-btn"
+        [routerLink]="['/legals']" 
+        >
+    </form>
+
+    <p>Revisa los términos legales antes de continuar</p>
+
+    <p class="welcome__footer">
+        <span>Todos los derechos reservados</span>
+        <span>&#64;SilviaCrece</span>
+    </p>
+</div>

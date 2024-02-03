@@ -10,7 +10,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
   overflow: hidden;
 }
 .tarjeta-producto-container {
@@ -29,7 +29,7 @@ h2 {
   width: 35%;
   background-size: cover;
   background-position: center;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
   > div {
     position: absolute;
     bottom: 10px;
@@ -37,7 +37,7 @@ h2 {
     img {
       height: 20px;
       background-color: $color-principal-claro;
-      border-radius: $border-radius-grande;
+      border-radius: $border-radius;
     }
   }
 }
@@ -58,7 +58,7 @@ h2 {
   text-decoration: none;
   color: #000;
   padding: 15px 20px;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
 }
 
 #informacion {
@@ -67,7 +67,7 @@ h2 {
 
 #envios-container {
   background-color: $color-principal-claro;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
   padding: 10px;
   margin: 10px 0;;
   align-items: center;
@@ -95,13 +95,13 @@ h2 {
   border: unset;
   cursor: pointer;
   padding: 15px 30px;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
   font-weight: bold;
 }
 
 dialog {
   background-color: $color-principal-claro;
-  border-radius: $border-radius-chico;
+  border-radius: $border-radius;
   border: unset;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.150);
   div {

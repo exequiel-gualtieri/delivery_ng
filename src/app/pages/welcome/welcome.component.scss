@@ -1,0 +1,46 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+.welcome {  
+  &__container {
+
+    display: grid;
+    background-color: $main-theme-color;
+    place-content: center;
+    justify-items: center;
+    height: 100svh;
+    color: #FFF;
+  }
+  &__logo {
+    max-width: 15rem;
+    margin-bottom: 1rem;
+    @media (max-height: 600px) {
+      display: none;
+    }
+    @media (max-height: 700px) {
+      max-width: 12rem;
+      transition: .4s;
+      opacity: 0;
+    }
+  }
+  &__form {
+    @include v-center;
+    > .app-btn {
+      @include app-button();
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 1rem;
+    pointer-events: none;
+    @media (max-height: 700px) {
+      transition: .4s;
+      opacity: 0;
+    }
+  }
+}
+

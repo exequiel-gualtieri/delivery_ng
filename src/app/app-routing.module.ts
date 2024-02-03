@@ -6,10 +6,16 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ArticuloComponent } from './pages/articulo/articulo.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
+import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { LegalsComponent } from './pages/legals/legals.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: WelcomeComponent, 
+  },
+  {
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -31,6 +37,10 @@ const routes: Routes = [
   {
     path: 'buscar',
     component: BuscarComponent
+  },
+  {
+    path: 'legals',
+    component: LegalsComponent
   }
 ];
 
@@ -38,4 +48,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

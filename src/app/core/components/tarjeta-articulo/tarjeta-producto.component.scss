@@ -3,8 +3,8 @@
 #container {
   height: 100px;
   display: flex;
-  background-color: $color-principal;
-  border-radius: $border-radius-chico;
+  background-color: $main-theme-color;
+  border-radius: $border-radius;
   overflow: hidden;
   font-size: small;
 }
@@ -21,8 +21,8 @@
     height: 20px;
     margin-bottom: 5px;
     margin-bottom: 10px;
-    background-color: $color-sello-comida;
-    border-radius: $border-radius-grande;
+    background-color: $hospital-green;
+    border-radius: $border-radius;
     &:first-child {
       margin-left: 10px;
     }

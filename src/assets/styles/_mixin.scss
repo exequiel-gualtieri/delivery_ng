@@ -7,3 +7,25 @@
   display: flex;
   justify-content: center;
 }
+@mixin v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@mixin app-button(
+  $bg-color: $btn-color,
+  $color: #FFF,
+  $border: $btn-border-color
+  ) {
+  width: 19rem;
+  margin-bottom: 1rem;
+  background-color: $bg-color;
+  color: $color;
+  text-align: center;
+  font-size: 1rem;
+  height: 4rem;
+  border:unset;
+  border-bottom: .25rem solid $border;
+  border-radius: 1rem;
+  cursor: pointer;
+}
