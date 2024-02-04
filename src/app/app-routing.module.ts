@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'legals',
     component: LegalsComponent
+  },
+  {
+    path: '**',
+    component: HomeComponent
   }
 ];
 

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'delivery_ng';
+  
+  title = 'SilviaCrece';
+  toShowHeader: Boolean = true;
+  toShowTabs: Boolean = true;
+
 }

@@ -3,8 +3,8 @@
 header {
   position: relative;
   height: 80px;
-  background-color: $color-principal;
-  border-radius: 0 0 $border-radius-mediano $border-radius-mediano;
+  background-color: $white-color;
+  border-radius: 0 0 $border-radius $border-radius;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -24,7 +24,7 @@ header::before {
   opacity: 0;
   z-index: -1;
   transition: 500ms;
-  border-radius: 0 0 $border-radius-mediano $border-radius-mediano;
+  border-radius: 0 0 $border-radius $border-radius;
 }
 
 header.extendido::before {

@@ -1,0 +1,28 @@
+@import 'variables.scss';
+@import 'mixin.scss';
+
+.legal {
+
+  &__container-main {
+    padding: 2rem;
+    background-color: $white-color;
+    height: 100svh;
+    display: inline-block;
+  }
+
+  &__form {
+    @include h-center;
+    gap: 1rem;
+    > .app-btn {
+      @include app-button();
+      width: 180px;
+    }
+    > .app-btn-danger {
+      @include app-button($btn-danger-color,#FFF,$btn-border-danger-color);
+      width: 180px;
+    }
+  }
+
+}
+  
+

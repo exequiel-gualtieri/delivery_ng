@@ -36,7 +36,7 @@ textarea {
   display: block;
   border-radius: $border-radius;
   border: unset;
-  background-color: $color-principal-claro;
+  background-color: $btn-border-color;
   margin-top: 10px;
   width: 100%;
   resize: none;
@@ -52,6 +52,6 @@ button {
   width: 100%;
   border-radius: $border-radius;
   border: unset;
-  background-color: $color-principal-claro;
+  background-color: $btn-border-color;
   padding: 10px;
 }

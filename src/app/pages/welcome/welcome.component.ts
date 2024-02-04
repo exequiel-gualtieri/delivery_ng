@@ -1,5 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component, EventEmitter, Inject, OnDestroy, OnInit, Output } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-welcome',
@@ -9,6 +10,17 @@ import { Router, RouterModule } from '@angular/router';
   imports: [RouterModule]
 
 })
-export class WelcomeComponent {
+export class WelcomeComponent implements OnInit, OnDestroy {
   
+  constructor(private app: AppComponent) { }
+ 
+  ngOnInit(): void {
+    this.app.toShowHeader = false;
+    this.app.toShowTabs = false;
+  }
+  ngOnDestroy(): void {
+    this.app.toShowHeader = true;
+    this.app.toShowTabs = true;
+  }
+
 }

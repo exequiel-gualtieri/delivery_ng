@@ -1,1 +1,29 @@
-<p>legals works!</p>
+
+<section class="legal__container-main">
+  <p><strong>Hola, soy Silvia</strong>, y te doy la más cordial bienvenida a mi catálogo virtual.</p>
+  <p>Quiero agradecerte por confiar en nuestra aplicación. A continuación hay un par de cosas que debes saber:</p>
+  
+  <p>En <em>SilviaCrece</em>, <strong>no recopilamos ni extraemos ningún tipo de información personal del cliente y usuario</strong>. Todos los datos introducidos, ya sea información personal o cualquier otro tipo de dato, se almacenan localmente en tu dispositivo y <strong>no se transmiten a ningún servidor externo ni a terceros</strong>.</p>
+  
+  <p>La información almacenada localmente en la aplicación se utiliza únicamente con el propósito de brindar una experiencia personalizada y mejorar la funcionalidad de <em>SilviaCrece</em>. <strong>No se comparte, vende ni divulga de ninguna manera con terceros</strong>.</p>
+  
+  <p>Si tienes alguna pregunta sobre nuestra política de privacidad, o si deseas ejercer tus derechos relacionados con tus datos personales, por favor, contáctanos a través de </p>
+  
+  <p>Al hacer clic en "Estoy de acuerdo", confirmas que has leído y aceptado nuestra política de privacidad.</p>
+  
+  <p>Gracias por confiar en <em>SilviaCrece</em>. Estamos comprometidos en proteger tu privacidad y proporcionarte una experiencia segura y satisfactoria.</p>
+
+  <form class="legal__form">
+    <input type="button"
+    value="Estoy de acuerdo" 
+    class="app-btn"
+    [routerLink]="['/home']" 
+    >
+    <input type="button"
+    value="No estoy de acuerdo" 
+    class="app-btn-danger"
+    [routerLink]="['/legals']" 
+    >
+</form>
+
+</section>

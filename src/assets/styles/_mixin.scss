@@ -27,5 +27,13 @@
   border:unset;
   border-bottom: .25rem solid $border;
   border-radius: 1rem;
+  transition: .1s;
   cursor: pointer;
+  &:active {
+    // border-bottom: ;
+    border-width: 0
+  }
+  &:focus {
+    outline: unset;
+  }
 }

@@ -9,19 +9,21 @@
     <p class="welcome__subtitle">Te damos la bienvenida a nuestro catálogo virtual</p>
 
     <form class="welcome__form">
-        <input [disabled]="true"
+        <input 
+        
+        type="button"
         value="Continuar" 
         class="app-btn"
         [routerLink]="['/home']" 
         >
-        <input
+        <!-- <input type="button"
         value="Términos legales" 
         class="app-btn"
         [routerLink]="['/legals']" 
-        >
+        > -->
     </form>
 
-    <p>Revisa los términos legales antes de continuar</p>
+    <a style="color: #FFF;" [routerLink]="['/legals']">Términos legales</a>
 
     <p class="welcome__footer">
         <span>Todos los derechos reservados</span>

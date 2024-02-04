@@ -36,7 +36,7 @@ h2 {
     left: 10px;
     img {
       height: 20px;
-      background-color: $color-principal-claro;
+      background-color: $main-theme-color;
       border-radius: $border-radius;
     }
   }
@@ -53,7 +53,7 @@ h2 {
 }
 
 #mas {
-  background-color: $color-principal;
+  background-color: $main-theme-color;
   font-size: xx-large;
   text-decoration: none;
   color: #000;
@@ -66,7 +66,7 @@ h2 {
 }
 
 #envios-container {
-  background-color: $color-principal-claro;
+  background-color: $main-theme-color;
   border-radius: $border-radius;
   padding: 10px;
   margin: 10px 0;;
@@ -91,7 +91,7 @@ h2 {
   width: 100%;
   margin-top: 40px;
   font-size: larger;
-  background-color: $color-principal-claro;
+  background-color: $main-theme-color;
   border: unset;
   cursor: pointer;
   padding: 15px 30px;
@@ -100,7 +100,7 @@ h2 {
 }
 
 dialog {
-  background-color: $color-principal-claro;
+  background-color: $main-theme-color;
   border-radius: $border-radius;
   border: unset;
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.150);

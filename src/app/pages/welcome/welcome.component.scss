@@ -3,7 +3,6 @@
 
 .welcome {  
   &__container {
-
     display: grid;
     background-color: $main-theme-color;
     place-content: center;
@@ -28,6 +27,7 @@
     > .app-btn {
       @include app-button();
       &:disabled {
+        pointer-events: none;
         opacity: 0.4;
       }
     }

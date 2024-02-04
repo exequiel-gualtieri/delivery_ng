@@ -7,7 +7,7 @@ $altura: 30px;
   justify-content: space-between;
   width: 80px;
   height: $altura;
-  background-color: $color-principal-claro;
+  background-color: $btn-border-color;
   border-radius: $border-radius;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@ $altura: 30px;
 button {
   border: unset;
   font-weight: bold;
-  background-color: $color-principal;
+  background-color: $btn-border-color;
   padding: 0 10px;
 }
 
