@@ -1,21 +1,55 @@
 @import 'variables.scss';
 
-div {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: flex-end;
-  border-radius: $border-radius;
-  overflow: hidden;
-}
+.card {
+  &__category {
+    &-container {
+      position: relative;
+      padding: 4px;
+      background: #FFF;
+      height: max-content;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 30px 60px 0 #5A749466;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    &-bg {
+      background-position: center;
+      background-size: cover;
+      aspect-ratio: 2/1;
+      border-radius: 8px;
+    }
+    &-name {
+      top: 4px;
+      margin: 0;
+      height: 36px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.4rem;
+      position: absolute;
+      background: linear-gradient(180deg, #FFF 50%, transparent);
+      border-radius: 0 0 40px 0;
+  
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        border-radius: 50%;
+      }
+  
+      &:before {
+        left: -20px;
+        box-shadow: 8px -8px 0 #FFF;
+      }
+      &:after {
+        right: -20px;
+        box-shadow: -8px -8px 0 #FFF;
+      }
+    }
+  }
 
-h3 {
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  padding: $border-radius 0;
-  background-color: rgba(225,225,255,0.86);
+
 }

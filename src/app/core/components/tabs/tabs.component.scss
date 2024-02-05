@@ -10,13 +10,15 @@
   background-position: center 8px;
   height: 52px;
   font-weight: 400;
-  color: $font-color;
+  color: $color;
   font-weight: 600;
   font-size: .8rem;
 }
 
 .tabs {
   &__container {
+    margin: 0;
+    padding: 0;
     background-color: $white-color;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

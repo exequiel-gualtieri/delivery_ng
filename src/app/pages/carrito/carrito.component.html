@@ -12,7 +12,7 @@
           </div>
         </div>
         <div id="centro">
-          <p>Producto: {{productosCarrito()[i].nombre}}</p>
+          <p>{{productosCarrito()[i].nombre}}</p>
           <p *ngIf="producto.notas !== ''" >{{producto.notas}}</p>
           <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto, $event)" ></app-contador-cantidad>
         </div>

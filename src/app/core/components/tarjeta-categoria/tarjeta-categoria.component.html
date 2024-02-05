@@ -1,3 +1,4 @@
-<div [ngStyle]="{'background-image': 'url('+categoria.fotoUrl+')'}">
-  <h3>{{categoria.nombre}}</h3>
+<div class="card__category-container">
+  <div class="card__category-bg" [ngStyle]="{'background-image': 'url('+categoria.fotoUrl+')'}"></div>
+  <h4 class="card__category-name">{{categoria.nombre}}</h4>
 </div>

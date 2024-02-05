@@ -1,5 +1,156 @@
 [
   {
+    "id": 0,
+    "nombre": "Empanadillas",
+    "fotoUrl": "https://i.blogs.es/60ed94/borekas/1366_2000.jpg",
+    "productos": [
+      {
+        "id": "1",
+        "nombre":"Empanadilla de Ternera Criolla",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de ternera","Cebolla","Pimiento rojo","Especias"],
+        "fotoUrl": "https://i.blogs.es/36b8aa/empanadas-de-carne_postseo_conpack4/1366_2000.jpeg"
+      },
+      {
+        "id": "2",
+        "nombre":"Empanadilla de Ternera con Verdura Picante",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de ternera","Cebolla","Pisto de verduras","Especias"],
+        "fotoUrl": "https://www.clarin.com/img/2021/02/18/3eecOZSBW_1256x620__1.jpg"
+      },
+      {
+        "id": "3",
+        "nombre":"Empanadilla de Pollo Criolla",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de pollo","Cebolla","Pimiento rojo","Especias"],
+        "fotoUrl": "https://madridgastronomica.es/wp-content/uploads/2020/10/madrid-gastronomica-argentina-empanadas-de-pollo.jpg"
+      },
+      {
+        "id": "4",
+        "nombre":"Empanadilla Pollo Al Curry",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de pollo","Cebolla","Pimiento rojo","Especias"],
+        "fotoUrl": "https://images.aws.nestle.recipes/resized/2020_04_29T15_02_24_mrs_ImageRecipes_145359lrg_1080_850.jpg"
+      },
+      {
+        "id": "5",
+        "nombre":"Empanadilla Pollo Carbonara",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de pollo","Cebolla","Champiñón","laminado","Nata","Especias"],
+        "fotoUrl": "https://media-cdn.tripadvisor.com/media/photo-s/1d/f8/ae/b2/empanada-carbonara.jpg"
+      },
+      {
+        "id": "6",
+        "nombre":"Empanadilla 4 Quesos",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Queso cheddar","Queso mozzarella","Queso roquefort","Queso Emmental","Especias"],
+        "fotoUrl": "https://i0.wp.com/elsiglo.com.ve/wp-content/uploads/2023/07/empanada-4-quesos.jpg?fit=1000%2C600&ssl=1"
+      },
+      {
+        "id": "7",
+        "nombre":"Empanadilla Jamón Y Queso",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Queso Edam","Jamón york","Queso Mozzarella","Especias"],
+        "fotoUrl": "https://images.hola.com/imagenes/cocina/recetas/20210426188504/empanadillas-de-jamon-y-queso/0-945-404/empanadillas-jamon-queso-t.jpg"
+      },
+      {
+        "id": "8",
+        "nombre":"Empanadilla Queso Cebolla",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Queso Edam","Queso Mozzarella","Cebolla","Albahaca"],
+        "fotoUrl": "https://www.recetasnatura.com.ar/sites/default/files/styles/receta_cuerpo/public/recorte_web-natura_y_mayoliva-noviembre-2022-655x475-empanadas_de_queso_y_cebollas_.jpg?itok=8G3b4IvV"
+      },
+      {
+        "id": "9",
+        "nombre":"Empanadilla Caprese",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Queso mozzarella","Queso Edam","Tomate seco","Albahaca"],
+        "fotoUrl": "https://www.lasempanadisimasdeines.com/wp-content/uploads/2021/12/empanadilla-caprese-vagana-abierta.jpg"
+      },
+      {
+        "id": "10",
+        "nombre":"Empanadilla Bacón Queso",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de cerdo","Bacón","Mezcla de quesos","Especias"],
+        "fotoUrl": "https://img-global.cpcdn.com/recipes/6349e2f7cd2f864d/680x482cq70/empanadillas-de-bacon-queso-y-cebolla-con-mermelada-de-frutos-silvestres-foto-principal.jpg"
+      },
+      {
+        "id": "11",
+        "nombre":"Empanadilla Humita",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Bechamel","Maíz","Queso Emmental","Especias"],
+        "fotoUrl": "https://www.gourmet.cl/wp-content/uploads/2017/04/pizza-570x458.jpg"
+      },
+      {
+        "id": "12",
+        "nombre":"Empanadilla Carrillera",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de ternera estofada","Cebolla","Especias"],
+        "fotoUrl": "https://i.blogs.es/c63b53/empanadillas-de-atun-nueva-especialidad-1/840_560.jpeg"
+      },
+      {
+        "id": "13",
+        "nombre":"Empanadilla Espinacas",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Espinacas","Bechamel","Queso Emmental","Cebolla","Pimiento rojo","Especias"],
+        "fotoUrl": "https://hips.hearstapps.com/elle-es/assets/15/37/original/original-1456925833-hero1.jpg"
+      },
+      {
+        "id": "14",
+        "nombre":"Empanadilla de Atún",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Migas de atún","Pisto de verduras","Especias"],
+        "fotoUrl": "https://www.eroski.es/wp-content/uploads/2018/02/Empanadillas-de-at%C3%BAn-y-huevo-al-horno.jpg"
+      },
+      {
+        "id": "15",
+        "nombre":"Empanadilla de Setas con Trufa",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Champiñon laminado","Cebolla","Aroma de trufa","Mezcla de quesos","Especias"],
+        "fotoUrl": "https://lacasadelassetas.com/blog/wp-content/uploads/2015/10/empanadillas-de-setas.jpg"
+      },
+      {
+        "id": "16",
+        "nombre":"Empanadilla de Cochinita pibil",
+        "precio": 0,
+        "esVegano":false,
+        "esCeliaco":false,
+        "ingredientes": ["Carne de cerdo","Especias"],
+        "fotoUrl": "https://img-global.cpcdn.com/recipes/ca798c8ac3ce739d/1200x630cq70/photo.jpg"
+      }
+    ]
+  },
+  {
     "id": 1,
     "nombre": "Pizzas",
     "fotoUrl": "https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg",
