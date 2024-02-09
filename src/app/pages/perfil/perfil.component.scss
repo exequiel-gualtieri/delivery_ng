@@ -1,37 +1,50 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
-* {
-  font-size: large;
-}
-
-form, form > div {
-  display: flex;
-  flex-direction: column;
-}
-
-form {
-  gap: 20px;
-  div {gap: 5px}
-  margin: 10px 40px;
-}
-
-input {
-  border: none;
-  border-bottom: 2px solid gray;
-}
-
-button {
-  height: 40px;
-  font-weight: bold;
+:host {
   background-color: $main-theme-color;
-  border: 1px solid black;
-  border-radius: $border-radius;
-  cursor: pointer;
-  &:disabled {
-    background-color: $main-theme-color;
+}
+
+.perfil-data {
+  &__container {
+    padding: 2rem;
+    background-color: $white-color;
+    height: 100%;
+    @include v-center()
+  }
+  &__form {
+
+    width: 100%;
+    @include grid-center();
+    button {
+      @include app-button();
+      @include app-focus()
+    }
+  }
+  &__input {
+    width: 100%;
+    max-width: 19rem;
+    min-height: 5.4rem;
+    margin-bottom: 0.6rem;
+    @include v-center();
+
+    label {
+      // align-self: ;
+      border-bottom: 2px solid $btn-border-color;
+      align-self: normal;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: .4rem;
+      @include app-input();
+      @include app-focus()
+    }
   }
 }
 
+
+
 .error {
-  color: red;
+  color: $btn-border-danger-color;
 }

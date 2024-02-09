@@ -3,21 +3,31 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
 @mixin h-center {
   display: flex;
   justify-content: center;
 }
+
 @mixin v-center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
+
 @mixin app-button(
   $bg-color: $btn-color,
   $color: #FFF,
   $border: $btn-border-color
   ) {
-  width: 19rem;
+  width: 100%;
+  max-width: 19rem;
   margin-bottom: 1rem;
   background-color: $bg-color;
   color: $color;
@@ -33,7 +43,27 @@
     // border-bottom: ;
     border-width: 0
   }
+  // &:focus {
+  //   outline: unset;
+  // }
+}
+
+@mixin app-input() {
+  height: 2rem;
+  border: 0;
+  //border-bottom: 2px solid $btn-border-color;
+  padding: 0.3rem 0.6rem;
+  border-radius: .4rem;
+}
+
+@mixin app-focus() {
   &:focus {
-    outline: unset;
+    outline: 0;
+    box-shadow: 
+      0 0 0px 2px #4949E7, 
+      0 0 0px 4px $white-color;
+    color: #4949e7;
+    font-weight: 600;
+    transition: .2s;
   }
 }

@@ -1,5 +1,8 @@
 @import 'variables.scss';
 
+section {
+  background-color: $white-color;
+}
 
 h2 {
   font-size: xx-large;
@@ -11,10 +14,11 @@ h2 {
 display: flex;
 align-items: center;
 height: 30px;
-background-color: $hospital-green;
+background-color: #FFF;
 border-radius: $border-radius;
 margin: 20px 10%;
-padding: 5 10px;
+padding: 5px 10px;
+outline: 2px solid $main-theme-color;
   input {
     width: 100%;
     background-color: unset;

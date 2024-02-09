@@ -1,19 +1,63 @@
+<div [ngClass]="gridLayout?'card-product__container-grid':'card-product__container-flex'">
 
-<div class="card__product-container">
+  @if (gridLayout) {
+    <div class="card-product__head">
+      <div class="card-product__bg-grid" [ngStyle]="{'background-image': 'url('+producto.fotoUrl+')'}">
+        <img *ngIf="producto.esCeliaco" src="./../../../../assets/icons/celiaco.png" alt="Apto celíaco">
+        <img *ngIf="producto.esVegano" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+      </div>
+      <h4 class="card-product__name">{{producto.nombre}}</h4>
+      <span *ngIf="showIngridients">{{producto.ingredientes}}</span>
+    </div>
+    <div class="card-product__detail">
+      <div *ngIf="showPrice" class="card-product__price">
+        <p>{{producto.precio + 3.15}} €</p>
+        <span *ngIf="showBtn" class="card-product__btn">
+          <i class="pi pi-plus"></i>
+        </span>
+      </div>
+    </div>
+  } @else {
+    <div class="card-product__bg-flex" [ngStyle]="{'background-image': 'url('+producto.fotoUrl+')'}">
+      <img *ngIf="producto.esCeliaco" src="./../../../../assets/icons/celiaco.png" alt="Apto celíaco">
+      <img *ngIf="producto.esVegano" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+    </div>
+    <div>
+      <h4 class="card-product__name">{{producto.nombre}}</h4>
+      <span class="card-product__ingredients" *ngIf="showIngridients">
+        @for (ingredient of producto.ingredientes; track ingredient) {
+          {{ingredient}},
+        }
+      </span>
+    </div>
+  }
 
-  <div class="card__product-bg" [ngStyle]="{'background-image': 'url('+producto.fotoUrl+')'}">
-    <img *ngIf="producto.esCeliaco" src="./../../../../assets/icons/celiaco.png" alt="Apto celíaco">
-    <img *ngIf="producto.esVegano" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
-  </div>
-  <div class="card__product-price">
-    <p>{{producto.precio + 3.15}} €</p>
-  </div>
+  
+</div> 
+<!-- 
+<div class="card__product-container" [ngClass]="">
 
-  <div class="card__product-detail">
-    <h4 class="card__product-name">{{producto.nombre}}</h4>
+  <div class="card__product-head">
+    <div class="card__product-bg" [ngStyle]="{'background-image': 'url('+producto.fotoUrl+')'}">
+      <img *ngIf="producto.esCeliaco" src="./../../../../assets/icons/celiaco.png" alt="Apto celíaco">
+      <img *ngIf="producto.esVegano" src="./../../../../assets/icons/vegano.svg" alt="Apto vegano">
+    </div>
   </div>
   
-</div>
+  
+  <div class="card__product-detail">
+    <h4 class="card__product-name">{{producto.nombre}}</h4>
+    {{producto.ingredientes}}
+  </div>
+  <div class="card__product-price">
+    <p *ngIf="showPrice">{{producto.precio + 3.15}} €</p>
+    <span *ngIf="showBtn" class="card__product-btn">
+      <i class="pi pi-plus"></i>
+    </span>
+  </div>
+  
+</div> -->
+
 
 
 

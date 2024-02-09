@@ -1,36 +1,32 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
-.card {
-  &__product {
-    &-container {
-      position: relative;
-      height: 100px;
-      background-color: $main-theme-color;
-      border-radius: $border-radius;
-      overflow: hidden;
-      font-size: small;
-      padding: 4px;
+.card-product {
+ 
+  &__container {
+    &-grid {
+      display: flex;
+      flex-direction: column;
+      padding: .4rem;
       background: #FFF;
-      height: max-content;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 30px 60px 0 #5a749466;
-      cursor: pointer;
-      &:after {
-        border-top-right-radius: 20px;
-        border-top-left-radius: 20px;
-        // content: '';
-        display: block;
-        width: 100%;
-        height: 100px;
-        position: absolute;
-        top: 0px;
-        left: 0;
-        right: 0;
-        background: linear-gradient(180deg, #eef4fb, transparent);
-      }
+      font-size: 0.8rem;
+      box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
+      height: 100%;
+      justify-content: space-between;
+      border-radius: .8rem;
     }
-    &-bg {
+    &-flex {
+      display: flex;
+      padding: .4rem;
+      background: #FFF;
+      font-size: 0.8rem;
+      box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
+      gap: .4rem;
+      border-radius: .4rem;
+    }
+  }
+  &__bg {
+    &-grid {
       width: 100%;
       background-size: cover;
       background-position: center;
@@ -48,43 +44,43 @@
         }
       }
     }
-    &-detail {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    &-name {
-      margin: 0.4rem 0;
-    }
-    &-price {
-      padding: 0 0.4rem;
-      position: absolute;
-      display: grid;
-      place-content: center;
-      min-width: 2rem;
-      height: 2rem;
-      top: 8rem;
-      right: .5rem;
-      font-size: 1rem;
-      background-color: #000;
-      color: #FFF;
-      border-radius: 0.4rem;
-      > p {
-        margin: 0;
+    &-flex {
+      height: 5rem;
+      aspect-ratio: 1 /1;
+      background-size: cover;
+      border-radius: 4px;
+      img {
+        
       }
     }
   }
-}
-
-h4 {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-ul li {
-  display: inline;
-  font-size: x-small;
-  &:not(:last-of-type)::after {
-    content: ',';
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+  &__name {
+    margin: .4rem 0 0 0;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    > p {
+      margin: 0;
+    }
+  }
+  &__btn {
+    display: grid;
+    place-content: center;
+    @include app-button();
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    border-width: 0;
+  }
+  
 }

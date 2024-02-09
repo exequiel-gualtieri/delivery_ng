@@ -2,7 +2,7 @@
   <form #buscarForm="ngForm" (change)="buscar()">
     <div id="barra-busqueda">
       <div class="pi pi-search"></div>
-      <input type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
+      <input #myInput type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
     </div>
   
     <div id="filtros-container">

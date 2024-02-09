@@ -1,7 +1,8 @@
 <section id="contenedor-productos">
   <app-tarjeta-producto 
-  *ngFor="let producto of productos()"
+  [template]="'category'"
   [producto]="producto"
   [routerLink]="[ '/articulo', producto.id]" routerLinkActive="router-link-active"
+  *ngFor="let producto of productos()"
   ></app-tarjeta-producto>
 </section>
