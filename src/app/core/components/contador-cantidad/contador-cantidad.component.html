@@ -1,5 +1,14 @@
-<div id="container">
-  <button [disabled]="numero()<=1" (click)="actualizarNumero(-1)">-</button>
-  <span>{{numero()}}</span>
-  <button (click)="actualizarNumero(1)">+</button>
+<div class="counter__container">
+  <button class="counter__btn"
+    [disabled]="numero()<=1" 
+    (click)="actualizarNumero(-1)">
+    <i class="pi pi-minus"></i>
+  </button>
+
+  <span class="counter__quantity">{{numero()}}</span>
+
+  <button class="counter__btn"
+    (click)="actualizarNumero(1)">
+    <i class="pi pi-plus"></i>
+  </button>
 </div>

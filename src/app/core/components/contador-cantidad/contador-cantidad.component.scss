@@ -2,6 +2,37 @@
 
 $altura: 30px;
 
+.counter { 
+  &__container {
+    background-color: #FFF;
+    border-radius: 2rem;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+  }
+  &__quantity {
+    width: 2rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+  }
+  &__btn {
+    width: 2rem;
+    aspect-ratio: 1;
+    border: unset;
+    background-color: $btn-color;
+    color: #FFF;
+    border-radius: 50%;
+    :disabled {
+      color: gainsboro;
+    }
+    .pi {
+      font-weight: 600;
+    }
+  }
+}
 #container {
   display: flex;
   justify-content: space-between;
@@ -10,13 +41,6 @@ $altura: 30px;
   background-color: $btn-border-color;
   border-radius: $border-radius;
   overflow: hidden;
-}
-
-button {
-  border: unset;
-  font-weight: bold;
-  background-color: $btn-border-color;
-  padding: 0 10px;
 }
 
 span {
