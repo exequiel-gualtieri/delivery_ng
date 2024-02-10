@@ -29,7 +29,6 @@
     @include v-center();
 
     label {
-      // align-self: ;
       border-bottom: 2px solid $btn-border-color;
       align-self: normal;
     }
@@ -38,7 +37,7 @@
       width: 100%;
       margin-bottom: .4rem;
       @include app-input();
-      @include app-focus()
+      @include app-focus();
     }
   }
 }

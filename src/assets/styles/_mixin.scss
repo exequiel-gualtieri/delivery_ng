@@ -40,16 +40,13 @@
   transition: .1s;
   cursor: pointer;
   &:active {
-    // border-bottom: ;
     border-width: 0
   }
-  // &:focus {
-  //   outline: unset;
-  // }
+
 }
 
 @mixin app-input() {
-  height: 2rem;
+  min-height: 2rem;
   border: 0;
   //border-bottom: 2px solid $btn-border-color;
   padding: 0.3rem 0.6rem;

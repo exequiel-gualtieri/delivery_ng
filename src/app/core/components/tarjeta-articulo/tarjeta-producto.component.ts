@@ -11,7 +11,7 @@ import { Producto } from '../../interfaces/productos';
 })
 export class TarjetaArticuloComponent implements OnInit {
 
-  @Input({required:true}) producto!:Producto;
+  @Input({required:true}) producto?:Producto;
   @Input() template:string = 'search';
   gridLayout: Boolean = true;
   showBtn:Boolean = true; 
@@ -19,6 +19,10 @@ export class TarjetaArticuloComponent implements OnInit {
   showIngridients:Boolean = true;
   
   ngOnInit(): void {
+    this.setLayout(this.template);
+  }
+
+  setLayout(layout:string):void {
     switch (this.template) {
       case 'search':
         this.gridLayout = false;
@@ -32,9 +36,14 @@ export class TarjetaArticuloComponent implements OnInit {
         this.showPrice = true;
         this.showIngridients = false;
         break;
+      case 'only':
+        this.gridLayout = true;
+        this.showBtn = false;
+        this.showPrice = true;
+        this.showIngridients = true;
+        break;
       default:
-        this.template = 'category';
-        this.ngOnInit();
+        this.setLayout('category');
         break;
     }
   }

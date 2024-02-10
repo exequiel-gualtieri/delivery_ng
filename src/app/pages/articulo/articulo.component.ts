@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, inject, signal } from '@angular/core';
 import { HeaderService } from '../../core/services/header.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductosService } from '../../core/services/productos.service';
@@ -7,13 +7,14 @@ import { CommonModule } from '@angular/common';
 import { ContadorCantidadComponent } from "../../core/components/contador-cantidad/contador-cantidad.component";
 import { CartService } from '../../core/services/cart.service';
 import { FormsModule } from '@angular/forms';
+import { TarjetaArticuloComponent } from '../../core/components/tarjeta-articulo/tarjeta-producto.component';
 
 @Component({
     selector: 'app-articulo',
     templateUrl: './articulo.component.html',
     styleUrl: './articulo.component.scss',
     standalone: true,
-    imports: [CommonModule,FormsModule,ContadorCantidadComponent]
+    imports: [CommonModule,FormsModule,ContadorCantidadComponent, TarjetaArticuloComponent]
 })
 export class ArticuloComponent  implements OnInit {
 
@@ -27,6 +28,12 @@ export class ArticuloComponent  implements OnInit {
   
   ngOnInit(): void {
     this.headerService.titulo.set('Artículo');
+  }
+
+  adjust(textArea: any) {
+    textArea!.style.overflow = 'hidden';
+    textArea!.style.height = 'auto';
+    textArea!.style.height = `${textArea!.scrollHeight}px`;
   }
 
   constructor(private ac: ActivatedRoute, private router: Router) {

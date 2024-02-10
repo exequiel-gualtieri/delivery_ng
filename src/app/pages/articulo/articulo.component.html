@@ -1,16 +1,12 @@
-<img
-  id="fotoProducto"
-  src="{{ producto?.fotoUrl }}"
-  alt="{{ producto?.nombre }}"
-/>
-<section class="margen-chico">
-  <ul>
-    <span>Ingredientes:</span>
-    <li *ngFor="let ingrediente of producto?.ingredientes">
-      {{ ingrediente }}
-    </li>
-  </ul>
-  <div>
+<section class="article__container">
+  
+  <app-tarjeta-producto 
+    [template]="'only'"
+    [producto]="producto">
+  </app-tarjeta-producto>
+
+
+  <div class="article__allergens">
     <div class="apto-container" *ngIf="producto?.esCeliaco">
       <img
         class="apto"
@@ -29,11 +25,23 @@
     </div>
   </div>
 
-  <label for="notas">Notas:</label>
-  <textarea name="notas" id="notas" cols="30" rows="10" [(ngModel)]="notas" ></textarea>
-  <div id="cantidad-container">
-    <label for="cantidad">Cantidad:</label>
-    <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
-  </div>
-  <button (click)="agregarAlCarrito()">Agregar al carrito</button>
+  <form class="article-form" action="">
+    
+    <label 
+      class="article-form__textarea-label"
+      for="notas">Notas:</label>
+    <textarea id="notas"
+      class="article-form__textarea" name="notas"
+      (keyup)="adjust($event.target)" 
+      [(ngModel)]="notas" >
+    </textarea>
+    
+    <div class="article-form__counter">
+      <label for="cantidad">Cantidad:</label>
+      <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
+    </div>
+    
+    <button class="article-form__btn" (click)="agregarAlCarrito()">Agregar al carrito</button>
+  </form>
+
 </section>
