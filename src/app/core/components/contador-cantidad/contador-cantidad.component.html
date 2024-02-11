@@ -1,6 +1,16 @@
 <div class="counter__container">
-  <button class="counter__btn"
-    [disabled]="numero()<=1" 
+
+  <button 
+    *ngIf="numero() <= 1 && cart"
+    class="counter__btn-delete"
+    [disabled]="numero() === 2" 
+    (click)="$removeItem()">
+    <i class="pi pi-trash"></i>
+  </button>
+
+  <button *ngIf="numero() > 1"
+    class="counter__btn"
+    [disabled]="numero()<= 1 " 
     (click)="actualizarNumero(-1)">
     <i class="pi pi-minus"></i>
   </button>

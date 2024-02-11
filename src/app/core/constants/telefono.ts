@@ -1,1 +1,1 @@
-export const NUMERO_TELEFONO = '+34604856851'
+export const NUMERO_TELEFONO = '+34600000000'

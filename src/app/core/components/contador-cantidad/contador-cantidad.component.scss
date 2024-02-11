@@ -13,18 +13,24 @@ $altura: 30px;
     width: max-content;
   }
   &__quantity {
-    width: 2rem;
+    width: 1.2rem;
     display: inline-block;
     text-align: center;
+    font-size: 1rem;
     font-weight: 600;
   }
-  &__btn {
+  &__btn, &__btn-delete {
     width: 2rem;
     aspect-ratio: 1;
     border: unset;
     background-color: $btn-color;
     color: #FFF;
     border-radius: 50%;
+  }
+    &__btn {
+      &-delete {
+        background-color: $btn-border-danger-color;
+      }
     :disabled {
       color: gainsboro;
     }

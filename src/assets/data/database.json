@@ -7,7 +7,7 @@
       {
         "id": "1",
         "nombre":"Empanadilla de Ternera Criolla",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Cebolla","Pimiento rojo","Especias"],
@@ -16,7 +16,7 @@
       {
         "id": "2",
         "nombre":"Empanadilla de Ternera con Verdura Picante",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Cebolla","Pisto de verduras","Especias"],
@@ -25,7 +25,7 @@
       {
         "id": "3",
         "nombre":"Empanadilla de Pollo Criolla",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de pollo","Cebolla","Pimiento rojo","Especias"],
@@ -34,7 +34,7 @@
       {
         "id": "4",
         "nombre":"Empanadilla Pollo Al Curry",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de pollo","Cebolla","Pimiento rojo","Especias"],
@@ -43,7 +43,7 @@
       {
         "id": "5",
         "nombre":"Empanadilla Pollo Carbonara",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de pollo","Cebolla","Champiñón","laminado","Nata","Especias"],
@@ -52,7 +52,7 @@
       {
         "id": "6",
         "nombre":"Empanadilla 4 Quesos",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Queso cheddar","Queso mozzarella","Queso roquefort","Queso Emmental","Especias"],
@@ -61,7 +61,7 @@
       {
         "id": "7",
         "nombre":"Empanadilla Jamón Y Queso",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Queso Edam","Jamón york","Queso Mozzarella","Especias"],
@@ -70,7 +70,7 @@
       {
         "id": "8",
         "nombre":"Empanadilla Queso Cebolla",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Queso Edam","Queso Mozzarella","Cebolla","Albahaca"],
@@ -79,7 +79,7 @@
       {
         "id": "9",
         "nombre":"Empanadilla Caprese",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Queso mozzarella","Queso Edam","Tomate seco","Albahaca"],
@@ -88,7 +88,7 @@
       {
         "id": "10",
         "nombre":"Empanadilla Bacón Queso",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de cerdo","Bacón","Mezcla de quesos","Especias"],
@@ -97,7 +97,7 @@
       {
         "id": "11",
         "nombre":"Empanadilla Humita",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Bechamel","Maíz","Queso Emmental","Especias"],
@@ -106,7 +106,7 @@
       {
         "id": "12",
         "nombre":"Empanadilla Carrillera",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera estofada","Cebolla","Especias"],
@@ -115,7 +115,7 @@
       {
         "id": "13",
         "nombre":"Empanadilla Espinacas",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Espinacas","Bechamel","Queso Emmental","Cebolla","Pimiento rojo","Especias"],
@@ -124,7 +124,7 @@
       {
         "id": "14",
         "nombre":"Empanadilla de Atún",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Migas de atún","Pisto de verduras","Especias"],
@@ -133,7 +133,7 @@
       {
         "id": "15",
         "nombre":"Empanadilla de Setas con Trufa",
-        "precio": 0,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Champiñon laminado","Cebolla","Aroma de trufa","Mezcla de quesos","Especias"],
@@ -142,7 +142,7 @@
       {
         "id": "16",
         "nombre":"Empanadilla de Cochinita pibil",
-        "precio": 0,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de cerdo","Especias"],
@@ -156,27 +156,27 @@
     "fotoUrl": "https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg",
     "productos": [
       {
-        "id": "7",
+        "id": "17",
         "nombre":"Pizza común",
-        "precio": 1000,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Muzarella","Aceitunas","Orégano"],
         "fotoUrl": "https://caserissimo.com/wp-content/uploads/2015/08/pizabuaur1-1024x768.jpg"
       },
       {
-        "id": "8",
+        "id": "18",
         "nombre":"Pizza especial",
-        "precio": 1200,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Muzarella","Aceitunas","Morrones","Tomate","Huevo"],
         "fotoUrl": "https://images-gmi-pmc.edge-generalmills.com/fce31bdd-1931-4f30-adef-a5bac0864676.jpg"
       },
       {
-        "id": "9",
+        "id": "19",
         "nombre":"Pizza 4 quesos",
-        "precio": 1300,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Muzarella","Roquefort","Provolone","Parmesano"],
@@ -190,54 +190,54 @@
     "fotoUrl": "https://img.freepik.com/vector-gratis/hamburguesa-realista-sobre-fondo-pizarra_79603-1042.jpg?w=2000",
     "productos": [
       {
-        "id": "1",
+        "id": "20",
         "nombre":"Hamburguesa con queso",
-        "precio": 1000,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso"],
         "fotoUrl": "https://quem.com.ar/tienda/wp-content/uploads/2020/12/Grandwich_17-10_-061.jpg"
       },
       {
-        "id": "2",
+        "id": "21",
         "nombre":"Hamburguesa especial",
-        "precio": 1500,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso", "Tomate", "Lechuga"],
         "fotoUrl": "https://elsheriffburger.com/uploads/lh90_elsheriffbuger/products/54/es/img-H.-Especial-5-WEB-de-taman%CC%83o-mediano.jpg"
       },
       {
-        "id": "3",
+        "id": "22",
         "nombre":"Hamburguesa vegana",
-        "precio": 1300,
+        "precio": 3,
         "esVegano":true,
         "esCeliaco":false,
         "ingredientes": ["Medallón a base de lentejas","Pan Brioche","Tomate"],
         "fotoUrl": "https://www.pequerecetas.com/wp-content/uploads/2009/04/hamburguesa-de-garbanzos-casera-receta.jpg"
       },
       {
-        "id": "4",
+        "id": "23",
         "nombre":"Hamburguesa celíaca",
-        "precio": 1250,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":true,
         "ingredientes": ["Carne de ternera","Pan libre de tacc","Queso"],
         "fotoUrl": "https://www.perez-h.com/newsite/wp-content/uploads/2016/06/queso-2.jpg"
       },
       {
-        "id": "5",
+        "id": "24",
         "nombre":"Hamburguesa americana",
-        "precio": 3500,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso","Salsa secreta BBQ", "Panceta"],
         "fotoUrl": "https://www.clarin.com/img/2022/05/27/0HXb0UR0v_2000x1500__1.jpg"
       },
       {
-        "id": "6",
+        "id": "25",
         "nombre":"Medallón platero",
-        "precio": 2000,
+        "precio": 2,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": ["Medallón a base de lentejas","Tomate","Lechuga"],
@@ -251,27 +251,27 @@
     "fotoUrl": "https://www.recetasnestle.com.ar/sites/default/files/2023-03/postre-en-vaso-dulce-leche.jpg.jpg",
     "productos": [
       {
-        "id": "10",
+        "id": "26",
         "nombre":"Tiramisú",
-        "precio": 800,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":true,
         "ingredientes": [],
         "fotoUrl": "https://i.blogs.es/410470/vasitos/1366_2000.jpeg"
       },
       {
-        "id": "11",
+        "id": "27",
         "nombre":"Chocotorta",
-        "precio": 800,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": [],
         "fotoUrl": "https://www.cronica.com.ar/__export/1653520801548/sites/cronica/img/2021/06/17/chocotorta_2_crop1623944104124.jpg_792575817.jpg"
       },
       {
-        "id": "12",
+        "id": "28",
         "nombre":"Turrón de Quaker",
-        "precio": 800,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": [],
@@ -285,27 +285,27 @@
     "fotoUrl": "https://img.band.uol.com.br/image/2023/02/09/bebidas-alcoolicas-181014_800x450.webp",
     "productos": [
       {
-        "id": "13",
+        "id": "29",
         "nombre":"Agua",
-        "precio": 100,
+        "precio": 2,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": [],
         "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
       },
       {
-        "id": "14",
+        "id": "30",
         "nombre":"Agua Saborizada Naranja",
-        "precio": 100,
+        "precio": 3,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": [],
         "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040783_f.jpg"
       },
       {
-        "id": "15",
+        "id": "31",
         "nombre":"Fanta Uva",
-        "precio": 100,
+        "precio": 2,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": [],
@@ -319,9 +319,9 @@
     "fotoUrl": "https://i-ticketing.iwos.com/1000x1000-th/products/220/products_220_2.png",
     "productos": [
       {
-        "id": "16",
+        "id": "32",
         "nombre":"Pizza party (4 pizzas)",
-        "precio": 100,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": [],
@@ -335,27 +335,27 @@
     "fotoUrl": "https://eldiariony.com/wp-content/uploads/sites/2/2023/06/shutterstock_521741356.jpg?resize=360,270&quality=80",
     "productos": [
       {
-        "id": "17",
+        "id": "33",
         "nombre":"Papas fritas",
-        "precio": 100,
+        "precio": 2,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": [],
         "fotoUrl": "https://cocina-casera.com/wp-content/uploads/2023/01/patatas-fritas-crujientes-francesa-1.jpg"
       },
       {
-        "id": "18",
+        "id": "34",
         "nombre":"Ensalada César",
-        "precio": 100,
+        "precio": 3,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Lechuga","Salsa César","Pollo","Croutones"],
         "fotoUrl": "https://www.cocinacaserayfacil.net/wp-content/uploads/2018/06/Ensalada-cesar.jpg"
       },
       {
-        "id": "19",
+        "id": "35",
         "nombre":"Ensalada simple",
-        "precio": 100,
+        "precio": 2,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": ["Lechuga","Tomate","Zanahoria"],

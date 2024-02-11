@@ -1,18 +1,75 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
-h2 {
-  font-size: xx-large;
-  text-align: center;
-  margin-top: 50px;
+.cart {
+  &__container {
+    padding: 1rem;
+    &-products {
+      display: grid;
+      gap: 0.625rem;
+    }
+  }
+  &__product {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: .2rem;
+    background: #FFF;
+    font-size: 0.8rem;
+    box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.2);
+    gap: 0.4rem;
+    border-radius: 0.4rem;
+    &-img {
+      width: 4.8rem;
+      aspect-ratio: 1;
+      background-size: cover;
+      border-radius: 4px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &-price {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      button {
+        @include app-button(
+          $btn-danger-color,#FFF,
+          $btn-border-danger-color);
+        display: grid;
+        place-content: center;
+        margin: 0;
+        width: 2rem;
+        height: 2rem;
+        aspect-ratio: 1;
+        border: 0;
+          .pi {
+            font-size: 2rem;
+          }
+        }
+    }
+  }
 }
 
-#tarjeas-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  border-radius: $border-radius;
-  overflow: hidden;
-}
+// h2 {
+//   font-size: xx-large;
+//   text-align: center;
+//   margin-top: 50px;
+// }
+
+// #tarjeas-container {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 15px;
+//   border-radius: $border-radius;
+//   overflow: hidden;
+// }
 .tarjeta-producto-container {
   position: relative;
   display: flex;
@@ -47,10 +104,6 @@ h2 {
   background-color: gainsboro;
 }
 
-#der {
-  width: 25%;
-  background-color: gray;
-}
 
 #mas {
   background-color: $main-theme-color;
